@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comparison Result</title>
+    <link rel="icon" type="favicon" href="static/size.png">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> 
+   <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg">
+        <img id="icon" type="logo.png" src="static/size.png" style="width: 24px;height: 24px;">
+        
+        <a class="navbar-brand" href="/" style="margin-left: 5px;"><strong>IMAGE FORENSIC</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+            <ul class="navbar-nav ml-auto" >
+                
+                <li class="nav-item  " style="margin-left: 1rem;">
+                    
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                
+                
+            <!-- </ul>
+            
+            <ul class="navbar-nav ml-auto" > -->
+            
+                    <li class="nav-item ">
+                        
+                    
+                    <a class="nav-link inactive" href="/keysearch">KeySearch</a>
+                </li>
+                
+                
+            </ul>  
+        </div>
+     </nav>
+
+     <div class="bottomimage">
+              <source> <img src="static/sameimg.jpg" alt="" style="height: 384px; width: 693px; margin-left: 388px;">
+            </div>
+            <p>{{result}}</p>
+            <div style="margin-left: 20px;">
+                <h1 style="font-size: 60px; color:rgb(13, 195, 231); font-family: 'Comic Neue', cursive;" ><strong>IMAGE IS NOT CURREPTED</strong></h1>
+                <h1>Comparison Result </h1>
+                <button style="margin-left: 600px; color: blue; align-items: center;" onclick="Copy()" style="color: blue;">Copy</button>
+                <input type="text" class="copy_text" value={{refid}} >
+                
+                {% if is_same_metadata %}
+                    <p><b>UPLOADED FILE..<b></p>
+                {% else %}
+                    <p><b>UPLOADED FILE..</b></p>
+                {% endif %}
+                
+                <h2>Image 1</h2>
+               <source> <img src="static/img/image1.png" alt="" style="height: -1px;width: 115px;">
+                <div class="metadata" >
+                    <pre>{{ image1 }}</pre>
+                    <p>IMAGE ID:</p>
+                    <p>ref id:{{refid}}</p>
+                
+                </div>
+                 <style>
+                    .metadata {
+                        margin-top: -100px;
+                        margin-bottom: 50px;
+                        margin-left: 150px;
+                    }
+                </style>
+                </div>
+
+                <script>var copy_text_val = document.querySelector('.copy_text');
+
+                    function Copy() {
+                      copy_text_val.select();
+                      document.execCommand("copy");
+                      console.log(copy_text_val.value);
+                    } </script>
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Images</title>
+    <link rel="icon" type="favicon" href="static/size.png">
+
+
+    <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <!-- font -->
+
+   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body style="background-image: url(/static/bg2.jpg);" >
+    
+
+  <nav id="navbar" class="navbar fixed-top navbar-expand-lg">
+        <img id="icon" type="logo.png" src="static/size.png" style="width: 24px;height: 24px;">
+        
+        <a class="navbar-brand" href="/" style="margin-left: 5px;"><strong>IMAGE FORENSIC</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+            </ul>
+            <ul class="navbar-nav ml-auto" >
+                
+                <li class="nav-item  " style="margin-left: 1rem;">
+                    
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                
+                
+            <!-- </ul>
+            
+            <ul class="navbar-nav ml-auto" > -->
+            
+                    <li class="nav-item ">
+                        
+                    
+                    <a class="nav-link inactive" href="/">KeySearch</a>
+                </li>
+                
+                
+            </ul>  
+        </div>
+     </nav>
+    
+
+    <form action="/search" method="post" enctype="multipart/form-data" style="margin-top: 80px;">
+        <div class="container-fluid" style="margin-top: 1rem;">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Section -->
+              <section>
+      
+                <i class="fad fa-sack-dollar"
+                  style="margin:0 auto;display: block;text-align: center;font-size: 6rem;color:red"></i>
+      
+                <!--First row-->
+                <div class="row d-flex justify-content-center">
+      
+      
+                  <div class="col-md-12 col-lg-12 mb-4">
+                    
+                    <!-- Material outline input -->
+                    <div class="container">
+                      <label>Upload first image:</label>
+                      <input type="file" name="image" class="form-control form-control-lg" accept="image/*" placeholder="upload image"  required>
+                    </div><br>
+                    <div class="container">
+                        <label>Enter your ref id:</label>
+                      <input type="number" name="text" class="form-control form-control-lg"  placeholder="Enter ref id"  required>
+                    </div>
+                
+      
+                  </div>
+      
+                  <div class="col-md-12 col-lg-12 mb-4">
+      
+                    <button type="submit" class="btn btn-danger" style="display: block;margin: 0 auto;">Check..</button>
+      
+                  </div>
+      
+                </div>
+                <!--First row-->
+      
+              </section>
+              <!-- Section -->
+            </div>
+            
+            </form>
+            <div class="bottomimage">
+              <source> <img src="static/open.jpg" alt="" style="height: 384px; width: 693px; margin-left: 388px;">
+            </div>
+            <style>
+              .bottomimage{
+                background-color:white;
+                height: 400px;
+                width: 100%;
+                margin: 0px;
+              }
+            </style>
+
+</body>
+
+</html>
